@@ -30,7 +30,8 @@ $books= $stmt->fetchAll(PDO::FETCH_ASSOC);
       <th>Дата добавления</th>
       <th>Краткое описание</th>
       <th>Кол-во страниц</th>
-      <th>цена</th>
+      <th>Цена</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -42,13 +43,13 @@ $books= $stmt->fetchAll(PDO::FETCH_ASSOC);
           <td><?= $book['description'];?></td>
           <td><?= $book['pages'];?></td>
           <td><?= $book['price'];?></td> 
-        
           <td>
-          <a href="delete.php?id=<?= $book['id'];?>" class="btn btn-danger">Delete</a>
-          <!--<a onclick="return confirm('Are you sure?');" href="delete.php?id=<?= $book['id'];?>" class="btn btn-danger">Delete</a> -->
+            <a onclick="return confirm('Вы действительно хотите удалить информацию?');" href="delete.php?id=<?= $book['id'];?>" class="btn btn-danger">Delete</a>
+          
+            <a href="show.php?id=<?= $book['id'];?>" class="btn btn-info">Show</a>
          </td>
     </tr>    
-    <?php endforeach; ?>
+    <?php endforeach; ?> 
   </tbody>
 </table> 
        </div>  
