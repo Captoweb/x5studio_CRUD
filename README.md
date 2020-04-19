@@ -1,2 +1,2 @@
 # x5studio_CRUD
-CRUD php, PDO. НО не хватает AJAX
+CRUD php, PDO. НО не хватает AJAX 
